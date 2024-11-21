@@ -10,6 +10,10 @@ body {
   font-family: Roboto;
   background-color: #1f2937;
   color: #f9faf8;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -18,9 +22,13 @@ h1 {
   color: #f9faf8;
 }
 
+h4 {
+  font-size: 1.25rem;
+}
+
 p,
 a {
-  font-size: 18px;
+  font-size: 14px;
   color: #e5e7eb;
 }
 
@@ -31,6 +39,10 @@ a {
 button {
   border: none;
   cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -44,10 +56,19 @@ button {
   }
 }
 
+section {
+  flex: 1;
+}
+
 .header {
   .inner {
     display: flex;
     justify-content: space-between;
+
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+    }
 
     h2 {
       font-size: 24px;
@@ -62,6 +83,9 @@ button {
 }
 
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .inner {
     display: flex;
     gap: 16px;
@@ -97,6 +121,9 @@ button {
 
 .info {
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .inner {
     display: flex;
@@ -143,5 +170,87 @@ button {
         }
       }
     }
+  }
+}
+
+.quote {
+  background-color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+
+    blockquote {
+      font-size: 36px;
+      font-style: italic;
+      font-weight: lighter;
+      color: #1f2937;
+    }
+
+    p {
+      color: #1f2937;
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+}
+
+.call-to-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+
+  .inner {
+    background-color: #3882f6;
+    padding: 24px 12px;
+    border-radius: 12px;
+
+    div {
+      max-width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    article {
+      flex: 1;
+      flex-basis: 70%;
+
+      h4 {
+        margin-bottom: 6px;
+      }
+    }
+
+    button {
+      flex: 1;
+      flex-basis: 100px;
+      background-color: transparent;
+      border: #f9faf8 1px solid;
+      border-radius: 6px;
+      padding: 6px 12px;
+      color: #f9faf8;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    padding: 16px;
   }
 }
